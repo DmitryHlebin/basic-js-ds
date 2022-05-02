@@ -1,4 +1,4 @@
-const nodemon = require('nodemon');
+//const nodemon = require('nodemon');
 const { NotImplementedError } = require('../extensions/index.js');
 
 const { Node } = require('../extensions/list-tree.js');
@@ -13,7 +13,6 @@ class BinarySearchTree {
     return this.treeRoot
   }
   add(data) {
-    let node = this.treeRoot;
       this.treeRoot = addWithin(this.treeRoot, data)
         function addWithin (node, data) {
           if(!node) {
@@ -74,7 +73,7 @@ find(data) {
         node.data = item.data;
         node.right = removeNode(node.right, item.data);
         return node;
-      }
+   }
       else if (data < node.data) {
         node.left = removeNode(node.left, data);
         return node;
